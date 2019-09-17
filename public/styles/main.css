@@ -1,0 +1,169 @@
+@font-face {
+    font-family: 'Blackmoor';
+    src: url('../fonts/Blackmoor.otf') format('opentype');
+}
+
+@keyframes OooO {
+    0% {color: #fff;}
+    17% {color: green}
+    43% {color: red;}
+    66% {color: pink}
+    100% {color: #fff;}
+}
+
+@keyframes sway {
+    0% {transform: rotate(-5.3deg);}
+    50% {transform: scale(1.2) rotate(7.438deg);}
+    100% {transform: rotate(-5.3deg);}
+}
+
+@keyframes swayi {
+    0% {transform: rotate(5.3deg);}
+    50% {transform: rotate(-7.438deg);}
+    100% {transform: rotate(5.3deg);}
+}
+
+/* Generic */
+* {box-sizing: border-box}
+
+body {
+    background: #3454d1 url('../images/smile.png') repeat;
+    background-size: 88px;
+    font: 13px/1 "Trebuchet MS";
+    margin: 0;
+}
+
+h1 {
+    font-size: 64px;
+    font-weight: 600;
+}
+
+h2 {
+    font-weight: 700;
+    font-size: 24px;
+}
+
+p {
+    display: table;
+}
+
+[onclick]{
+    cursor: pointer;
+}
+
+/* Semantic */
+header {
+    padding: 128px 0;
+    text-align: center;
+}
+
+/* Structural */
+.wrap {
+    margin: 0 auto;
+    max-width: 1024px;
+    width: 1024px;
+}
+
+.header-box {
+    display: flex;
+    position: relative;
+}
+
+.flex {display: flex}
+.vCenter {align-items: center}
+
+.split {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Visual */
+.bg--white {background-color:#fff}
+.bg--crimson {background-color:#c6212a}
+.bg--kakhi {background-color:#827f44}
+
+/* Textual */
+.color--black {color:#000}
+.color--white {color:#fff}
+.color--blue {color:#0606a2}
+
+.centered {
+    justify-content: center;
+    text-align: center;
+}
+
+.old {
+    font-family: 'Blackmoor';
+    letter-spacing: 1.25px;
+}
+
+.highlight--absolute {
+    bottom: 0;
+    left: -4px;
+    position: absolute;
+    right: -6px;
+    top: 0;
+    z-index: -1;
+}
+
+.highlight--black {background-color: #000}
+.highlight--pink {background-color: #ff0f80}
+.highlight--yellow {background-color: #ffff00}
+
+.thick {
+    font-size: 18px;
+    font-weight: 700;
+}
+
+/* Iconic */
+.icon {
+    background: no-repeat center / cover;
+    display: inline-block;
+    position: relative;
+    z-index: 10000;
+}
+
+.icon--50 {
+    height: 50px;
+    width: 50px;
+}
+
+/* Buttons */
+button:focus {outline: 0}
+
+.button--ugly {
+    background-color: #f0a;
+    border: 0;
+    box-shadow: 4px 4px 0 1px green;
+    color: #ffff00;
+    font-weight: 700;
+    letter-spacing: 1px;
+    padding: 7px 19px;
+    text-transform: uppercase;
+}
+
+.button--ugly:active {
+    box-shadow: none;
+    transform: translate(4px, 4px);
+}
+
+[alt]{
+    border: 3px solid transparent;
+}
+
+[alt]:active {
+    border: 3px solid #000;
+}
+
+/* Keyframes */
+.delay--25 {animation-delay: 1s}
+
+.funky {
+    animation: OooO 1s infinite;
+    color: #fff;
+    text-shadow: .5px .5px #000, 1px 1px #000, 1.5px 1.5px #000, 2px 2px #000;
+}
+
+.sway {animation: sway 1s infinite}
+.sway--i {animation: swayi 1s infinite}
+.spin--3d {animation: spin35 1s infinite}
